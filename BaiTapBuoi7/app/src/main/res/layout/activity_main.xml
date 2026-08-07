@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="Profile"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Khu vực chứa Avatar và nút Edit -->
+    <RelativeLayout
+        android:layout_width="140dp"
+        android:layout_height="140dp">
+
+        <!-- Dùng CardView để bo tròn Avatar -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            app:cardCornerRadius="60dp"
+            app:cardElevation="2dp">
+
+            <!-- ĐÃ SỬA THÀNH ẢNH img CỦA BẠN Ở ĐÂY -->
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Nút Edit nhỏ đè lên góc phải dưới -->
+        <ImageButton
+            android:id="@+id/btnEditAvatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/ic_launcher_background"
+            android:backgroundTint="#439A97"
+            android:padding="8dp"
+            android:src="@android:drawable/ic_menu_edit"
+            app:tint="#FFFFFF" />
+    </RelativeLayout>
+
+    <!-- Tên và Email -->
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Albert Florest"
+        android:textColor="#1F2937"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="albertflorest@email.com"
+        android:textColor="#9CA3AF"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="+44 1632 960860"
+        android:textColor="#9CA3AF"
+        android:textSize="14sp" />
+
+    <!-- Khoảng trống đẩy nút xuống dưới -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Nút Edit Profile -->
+    <Button
+        android:id="@+id/btnGoToEdit"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#439A97"
+        android:text="Edit Profile"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="12dp" />
+
+</LinearLayout>
